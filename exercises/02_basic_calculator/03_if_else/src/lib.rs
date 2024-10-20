@@ -1,11 +1,16 @@
 /// Return `true` if `n` is even, `false` otherwise.
 fn is_even(n: u32) -> bool {
-    todo!()
+    n % 2 == 0
 }
 
 #[cfg(test)]
 mod tests {
     use crate::is_even;
+
+    #[test]
+    fn zero() {
+        assert!(is_even(0));
+    }
 
     #[test]
     fn one() {
